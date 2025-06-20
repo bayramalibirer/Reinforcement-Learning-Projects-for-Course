@@ -1,0 +1,10 @@
+    result = env.reset()
+    observation = result[0] if isinstance(result, tuple) else result
+observation(state), reward, truncated, done, info = env.step(action)
+
+
+RL
+# gözlem : Çevreyi gözlemlemenizi temsil eden, ortama özgü bir nesne.
+# ödül : Önceki eylemle elde edilen ödül miktarı. Ölçek ortamlar arasında değişiklik gösterir ancak amaç her zaman toplam ödülünüzü artırmaktır.
+# bitti : Ortamı tekrar sıfırlamanın zamanı gelip gelmediği. Görevlerin çoğu (ancak hepsi değil) iyi tanımlanmış bölümlere bölünmüştür ve tamamlandığında True olması bölümün sonlandırıldığını gösterir. (Örneğin, belki de direk çok fazla eğilmiştir ya da son hayatınızı kaybetmişsinizdir.)
+# info : Hata ayıklama için yararlı tanılama bilgileri. Bazen öğrenme açısından yararlı olabilir (örneğin, ortamın son durum değişikliğinin ardındaki ham olasılıkları içerebilir). Ancak temsilcinizin resmi değerlendirmelerinin bunu öğrenme amacıyla kullanmasına izin verilmez.
